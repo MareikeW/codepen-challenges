@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px 100px;
+}
+
+h1 {
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-size: 8em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1 {
+    animation-name: onColours;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes onColours {
+    0% {
+        color: #A496A4;
+    }
+    35% {
+        color: #554d73;
+    }
+    70% {
+        color: #A5A7BB;
+    }
+    100% {
+        color: #A496A4;
+    }
+}
+
+img {
+    height: 80px;
+    position: absolute;
+    animation-name: noteSizes;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes noteSizes {
+    0% {
+        transform: rotate(25deg);      
+    }
+    25% {
+        transform: rotate(-25deg);
+        transform: scaleX(1.5);
+    }
+    50% {
+        transform: rotate(25deg);        
+    }
+    75% {
+        transform: rotate(-25deg);
+        transform: scaleX(1.5);
+    }
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+#note1 {
+    top: 2vh;
+    left: 0;   
+}
+
+#note2 {
+    top: 30vh;
+    right: 5vw;
+}
+
+#note3 {
+    bottom: 4vh;
+    left: 5vw;
+    
+}
+
+@media (min-width: 475px) {
+    img {
+        height: 110px;
+    }
+}
+
+@media (min-width: 580px) {
+    h1 {
+        font-size: 10em;
+    }
+}
+
+@media (min-width: 800px) {
+    #note2 {
+        top: 50px;
+    }
+}
+
+@media (min-width: 1100px) {
+    img {
+        height: 150px;
+    }
+}
